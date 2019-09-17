@@ -2,6 +2,7 @@ package ar.com.rys.z2020.ui.gallery;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,75 +11,93 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.squareup.picasso.Picasso;
+import com.yanzhenjie.album.Action;
+import com.yanzhenjie.album.Album;
+import com.yanzhenjie.album.AlbumConfig;
+import com.yanzhenjie.album.AlbumFile;
+import com.yanzhenjie.album.api.widget.Widget;
+import com.yanzhenjie.album.impl.OnItemClickListener;
+import com.yanzhenjie.album.widget.divider.Api21ItemDivider;
+import com.yanzhenjie.album.widget.divider.Divider;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Locale;
 
 import ar.com.rys.z2020.R;
 
 public class GalleryFragment extends Fragment {
 
-    private ImageView ivImageViewFromUrl;
-    private GridView gridView;
+    private Adapter mAdapter;
+    private ArrayList<AlbumFile> mAlbumFiles = new ArrayList<>();
 
-    public  static Image[] images = {
-            new Image("Falls",R.drawable.falls),
-            new Image("Flag",R.drawable.flag),
-            new Image("HuaHum",R.drawable.huahum),
-            new Image("River",R.drawable.river),
-            new Image("River",R.drawable.river),
-            new Image("River",R.drawable.river),
-            new Image("HuaHum",R.drawable.huahum),
-            new Image("HuaHum",R.drawable.huahum),
-            new Image("HuaHum",R.drawable.huahum),
-            new Image("HuaHum",R.drawable.huahum),
+
+    public  static String[] imagesString = {
+            String.valueOf(R.drawable.falls),
+            String.valueOf(R.drawable.flag),
+            String.valueOf(R.drawable.huahum),
+            String.valueOf(R.drawable.river),
+            String.valueOf(R.drawable.river),
+            String.valueOf(R.drawable.river),
+            String.valueOf(R.drawable.huahum),
+            String.valueOf(R.drawable.huahum),
+            String.valueOf(R.drawable.huahum),
+            String.valueOf(R.drawable.huahum),
     };
+
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+
         final View root = inflater.inflate(R.layout.fragment_gallery, container, false);
 
         super.onCreate(savedInstanceState);
 
-        gridView = root.findViewById(R.id.gridView);
+        ArrayList<String> imageList = new ArrayList<>();
+        Collections.addAll(imageList, imagesString);
+
+        imageList.forEach(p -> {
+
+            AlbumFile al = new AlbumFile();
+            al.setMediaType(AlbumFile.TYPE_IMAGE);
+            al.setPath(p);
+            mAlbumFiles.add(al);
+
+
+        });
 
         final Context context = this.getContext();
 
-        final ImageAdapter movieAdapter = new ImageAdapter(context, images);
-        gridView.setAdapter(movieAdapter);
+        Album.initialize(AlbumConfig.newBuilder(context)
+                .setAlbumLoader(new MediaLoader())
+                .setLocale(Locale.getDefault())
+                .build()
+        );
 
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+
+
+
+        RecyclerView recyclerView = root.findViewById(R.id.recycler_view);
+        recyclerView.setLayoutManager(new GridLayoutManager(context, 3));
+        Divider divider = new Api21ItemDivider(Color.TRANSPARENT, 10, 10);
+        recyclerView.addItemDecoration(divider);
+
+        mAdapter = new Adapter(context, new OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Log.i("INFO", ",MSJ RYSIO");
-
-
-                /*
-                final Image image = images[position];
-                ImageView imageView = root.findViewById(R.id.imageview_cover_art);
-                Picasso.get()
-                        .load(image.getImageUrl())
-                        .placeholder(R.drawable.ic_placeholder)
-                        .error(R.drawable.ic_error)
-                        .resize(300, 500)
-                        .onlyScaleDown()
-                        .into(imageView);
-
-                 */
-
-
-
-                Log.i("INFO", ",MSJ RYSIO");
-
-
-
+            public void onItemClick(View view, int position) {
+                previewImage(position);
             }
-        });
-
-
-
+        }, mAlbumFiles);
+        recyclerView.setAdapter(mAdapter);
 
 
 
@@ -87,5 +106,33 @@ public class GalleryFragment extends Fragment {
 
 
         return root;
+    }
+
+
+    private void previewImage(int position) {
+        if (mAlbumFiles == null || mAlbumFiles.size() == 0) {
+            //Toast.makeText(this, R.string.no_selected, Toast.LENGTH_LONG).show();
+        } else {
+            Album.galleryAlbum(this)
+                    .checkable(false)
+                    .checkedList(mAlbumFiles)
+                    .currentPosition(position)
+                    /*
+                    .widget(
+                            Widget.newDarkBuilder(this)
+                                    .title(mToolbar.getTitle().toString())
+                                    .build()
+                    )
+                    */
+                    .onResult(new Action<ArrayList<AlbumFile>>() {
+                        @Override
+                        public void onAction(@NonNull ArrayList<AlbumFile> result) {
+                            mAlbumFiles = result;
+                            mAdapter.notifyDataSetChanged(mAlbumFiles);
+                           // mTvMessage.setVisibility(result.size() > 0 ? View.VISIBLE : View.GONE);
+                        }
+                    })
+                    .start();
+        }
     }
 }
