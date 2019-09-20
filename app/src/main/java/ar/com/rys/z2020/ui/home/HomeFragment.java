@@ -16,6 +16,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 import ar.com.rys.z2020.R;
@@ -48,9 +49,22 @@ public class HomeFragment extends Fragment {
 
 
         prepareList();
+
+        ArrayAdapter arrayAdapter = new ArrayAdapter<String>(
+                root.getContext(), R.layout.list_item, listCountry);
+
+
+        List<Integer> resList = new ArrayList();
+        resList.add(R.drawable.ic_menu_home);
+
+        NotificationsAdapter nAdapter = new NotificationsAdapter(root.getContext(), R.layout.list_item, listCountry, resList);
+
+
         ListView listView = root.findViewById(R.id.listView);
-        listView.setAdapter(new ArrayAdapter<String>(
-                root.getContext(), R.layout.list_item, listCountry));
+
+        //listView.setAdapter(arrayAdapter);
+        listView.setAdapter(nAdapter);
+
 
         return root;
     }
