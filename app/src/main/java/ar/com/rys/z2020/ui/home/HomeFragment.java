@@ -20,50 +20,26 @@ import ar.com.rys.z2020.R;
 
 public class HomeFragment extends Fragment {
 
-    ArrayList<String> listCountry;
+    List<Integer> listOfTexts;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
-        prepareList();
+        listOfTexts = prepareList();
 
-        ArrayAdapter arrayAdapter = new ArrayAdapter<String>(
-                root.getContext(), R.layout.list_item, listCountry);
-
-
-        List<Integer> resList = new ArrayList();
-        resList.add(R.drawable.ic_menu_home);
-        resList.add(R.drawable.ic_calendar_alt_solid);
-        resList.add(R.drawable.ic_cloud_sun_rain_solid);
-        resList.add(R.drawable.ic_cloud_sun_rain_solid);
-        resList.add(R.drawable.ic_cloud_sun_rain_solid);
-        resList.add(R.drawable.ic_cloud_sun_rain_solid);
-        resList.add(R.drawable.ic_cloud_sun_rain_solid);
-        resList.add(R.drawable.ic_cloud_sun_rain_solid);
-        resList.add(R.drawable.ic_cloud_sun_rain_solid);
-        resList.add(R.drawable.ic_cloud_sun_rain_solid);
-        resList.add(R.drawable.ic_cloud_sun_rain_solid);
-        resList.add(R.drawable.ic_calendar_alt_solid);
-        resList.add(R.drawable.ic_calendar_alt_solid);
-        resList.add(R.drawable.ic_calendar_alt_solid);
-        resList.add(R.drawable.ic_calendar_alt_solid);
-        resList.add(R.drawable.ic_calendar_alt_solid);
-        resList.add(R.drawable.ic_calendar_alt_solid);
-        resList.add(R.drawable.ic_menu_home);
-        resList.add(R.drawable.ic_menu_home);
-        resList.add(R.drawable.ic_menu_home);
-        resList.add(R.drawable.ic_menu_home);
-        resList.add(R.drawable.ic_menu_home);
-        resList.add(R.drawable.ic_menu_home);
-        resList.add(R.drawable.ic_menu_home);
+        ArrayAdapter arrayAdapter = new ArrayAdapter<Integer>(
+                root.getContext(), R.layout.list_item, listOfTexts);
 
 
 
 
 
-        NotificationsAdapter nAdapter = new NotificationsAdapter(root.getContext(), R.layout.list_item, listCountry, resList);
+
+
+
+        HomeAdapter nAdapter = new HomeAdapter(root.getContext(), R.layout.list_item, listOfTexts);
 
 
         ListView listView = root.findViewById(R.id.listView);
@@ -73,27 +49,18 @@ public class HomeFragment extends Fragment {
         return root;
     }
 
-    public void prepareList()
+    public List<Integer> prepareList()
     {
-        listCountry = new ArrayList<String>();
-        listCountry.add("India");
-        listCountry.add("Brazil");
-        listCountry.add("Canada");
-        listCountry.add("China");
-        listCountry.add("France");
-        listCountry.add("Germany");
-        listCountry.add("Iran");
-        listCountry.add("Italy");
-        listCountry.add("Japan");
-        listCountry.add("Korea");
-        listCountry.add("Mexico");
-        listCountry.add("Netherlands");
-        listCountry.add("Portugal");
-        listCountry.add("Russia");
-        listCountry.add("Saudi Arabia");
-        listCountry.add("Spain");
-        listCountry.add("Turkey");
-        listCountry.add("United Kingdom");
-        listCountry.add("United States");
+
+        if(listOfTexts==null){
+            listOfTexts = new ArrayList<Integer>();
+            listOfTexts.add(R.string.home_item_termin);
+            listOfTexts.add(R.string.home_item_temperature);
+            listOfTexts.add(R.string.home_item_temperature_bsas);
+            listOfTexts.add(R.string.home_item_temperature_sma);
+        }
+
+        return  listOfTexts;
+
     }
 }

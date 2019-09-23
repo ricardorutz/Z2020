@@ -13,4 +13,10 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    
+    <string name="home_item_termin">Od 30go. grudnia 2019 do 8go. Stycznia 2020.</string>
+    <string name="home_item_temperature">Stopnie</string>
+    <string name="home_item_temperature_bsas">Buenos Aires  20°/35°</string>
+    <string name="home_item_temperature_sma">San Martin de los Andes  -1°/30°</string>
+    
 </resources>
