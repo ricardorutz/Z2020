@@ -54,10 +54,12 @@ public class HomeFragment extends Fragment {
 
         if(listOfTexts==null){
             listOfTexts = new ArrayList<Integer>();
+            listOfTexts.add(R.string.home_item_mayor);
             listOfTexts.add(R.string.home_item_termin);
             listOfTexts.add(R.string.home_item_temperature);
             listOfTexts.add(R.string.home_item_temperature_bsas);
             listOfTexts.add(R.string.home_item_temperature_sma);
+
         }
 
         return  listOfTexts;

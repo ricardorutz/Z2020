@@ -33,10 +33,12 @@ public class HomeAdapter extends ArrayAdapter<String> {
 
         if(iconResourcesIds == null){
             iconResourcesIds = new ArrayList();
+            iconResourcesIds.add(R.drawable.ic_age);
             iconResourcesIds.add(R.drawable.ic_calendar_alt_solid);
             iconResourcesIds.add(R.drawable.ic_cloud_sun_rain_solid);
             iconResourcesIds.add(R.drawable.ic_temperature_high_solid);
             iconResourcesIds.add(R.drawable.ic_temperature_low_solid);
+
         }
 
         return iconResourcesIds;
