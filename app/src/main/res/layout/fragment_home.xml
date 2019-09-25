@@ -9,8 +9,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="@drawable/huahum"
         tools:layout_editor_absoluteX="191dp"
         tools:layout_editor_absoluteY="193dp">
+
 
         <!--
 
