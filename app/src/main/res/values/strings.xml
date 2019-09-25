@@ -9,15 +9,15 @@
 
     <string name="menu_home">Strona Główna</string>
     <string name="menu_gallery">Galeria Zdjęć</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_slideshow">Trasy</string>
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
-    
+
     <string name="home_item_termin">Od 30go. grudnia 2019 do 8go. Stycznia 2020.</string>
-    <string name="home_item_temperature">Stopnie</string>
+    <string name="home_item_temperature">Klimaty</string>
     <string name="home_item_temperature_bsas">Buenos Aires  20°/35°</string>
     <string name="home_item_temperature_sma">San Martin de los Andes  -1°/30°</string>
     <string name="home_item_mayor">Złaz jest przewidziany dla starszych Wędrowników i Wędrowniczek powyżej lat 18 tu</string>
-    
+
 </resources>
