@@ -19,5 +19,6 @@
     <string name="home_item_temperature_bsas">Buenos Aires  20°/35°</string>
     <string name="home_item_temperature_sma">San Martin de los Andes  -1°/30°</string>
     <string name="home_item_mayor">Złaz jest przewidziany dla starszych Wędrowników i Wędrowniczek powyżej lat 18 tu</string>
+    <string name="title_activity_trasy">Map</string>
 
 </resources>
