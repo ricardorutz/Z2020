@@ -104,11 +104,13 @@ public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         private final OnItemClickListener mItemClickListener;
         private ImageView mIvImage;
+        //private TextView mTvDuration;
 
         ImageViewHolder(View itemView, OnItemClickListener itemClickListener) {
             super(itemView);
             this.mItemClickListener = itemClickListener;
             this.mIvImage = itemView.findViewById(R.id.iv_album_content_image);
+            //this.mTvDuration = itemView.findViewById(R.id.rysiotextView3);
             itemView.setOnClickListener(this);
         }
 
@@ -116,6 +118,7 @@ public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             Album.getAlbumConfig().
                     getAlbumLoader().
                     load(mIvImage, albumFile);
+            //mTvDuration.setText(AlbumUtils.convertDuration(albumFile.getDuration()));
         }
 
         @Override
