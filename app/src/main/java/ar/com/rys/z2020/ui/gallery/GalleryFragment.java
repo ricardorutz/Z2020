@@ -1,7 +1,6 @@
 package ar.com.rys.z2020.ui.gallery;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -71,22 +70,15 @@ public class GalleryFragment extends Fragment {
             al.setPath(p);
             mAlbumFiles.add(al);
 
-
         });
+
 
         final Context context = this.getContext();
 
-        Album.initialize(AlbumConfig.newBuilder(context)
-                .setAlbumLoader(new MediaLoader())
-                .setLocale(Locale.getDefault())
-                .build()
-        );
-
-
-
-
-
         RecyclerView recyclerView = root.findViewById(R.id.recycler_view);
+
+        //recyclerView.getChildItemId(root.findViewById(R.id.textView3));
+
         recyclerView.setLayoutManager(new GridLayoutManager(context, 3));
         Divider divider = new Api21ItemDivider(Color.TRANSPARENT, 10, 10);
         recyclerView.addItemDecoration(divider);
