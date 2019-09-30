@@ -26,12 +26,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
+<!--
         <fragment
             android:id="@+id/frg"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
             android:layout_height="306dp" />
+-->
+
+
+        <org.osmdroid.views.MapView
+            android:id="@+id/openmapview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
 
         <TextView
             android:id="@+id/textView2"

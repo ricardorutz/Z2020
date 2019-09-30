@@ -9,16 +9,21 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import org.osmdroid.views.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import org.osmdroid.util.GeoPoint;
+import org.osmdroid.views.MapController;
+
 
 import ar.com.rys.z2020.R;
 
 public class SlideshowFragment extends Fragment implements OnMapReadyCallback {
 
-
+    private MapView myOpenMapView;
+    private MapController myMapController;
     private GoogleMap mMap;
 
 /*
@@ -57,10 +62,23 @@ public class SlideshowFragment extends Fragment implements OnMapReadyCallback {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_slideshow, container, false);
-
+/*
         SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.frg);  //use SuppoprtMapFragment for using in fragment instead of activity  MapFragment = activity   SupportMapFragment = fragment
 
         mapFragment.getMapAsync(this);
+
+
+ */
+        GeoPoint madrid = new GeoPoint(40.416775, -3.70379);
+
+        myOpenMapView = rootView.findViewById(R.id.openmapview);
+        myOpenMapView.setBuiltInZoomControls(true);
+        myMapController = (MapController) myOpenMapView.getController();
+        myMapController.setCenter(madrid);
+        myMapController.setZoom(6);
+
+        myOpenMapView.setMultiTouchControls(true);
+
 
         return rootView;
     }
