@@ -4,12 +4,16 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -46,7 +50,6 @@ public class SlideshowFragment extends Fragment {
             String.valueOf(R.drawable.trasa_bsas),
             String.valueOf(R.drawable.trasa_sma),
             String.valueOf(R.drawable.trasa_wedro),
-
     };
 
 
@@ -73,12 +76,15 @@ public class SlideshowFragment extends Fragment {
 
         final Context context = this.getContext();
 
-        RecyclerView recyclerView = root.findViewById(R.id.recycler_view);
+        RecyclerView recyclerView = root.findViewById(R.id.recycler_maps_view);
 
-        //recyclerView.getChildItemId(root.findViewById(R.id.textView3));
+        //recyclerView.setLayoutManager(new GridLayoutManager(context, 1));
 
-        recyclerView.setLayoutManager(new GridLayoutManager(context, 1));
-        Divider divider = new Api21ItemDivider(Color.TRANSPARENT, 10, 10);
+        LinearLayoutManager linear = new LinearLayoutManager(context);
+        linear.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(linear);
+
+        Divider divider = new Api21ItemDivider(Color.BLACK, 10, 10);
         recyclerView.addItemDecoration(divider);
 
         mAdapter = new SlideshowAdapter(context, new OnItemClickListener() {
@@ -87,13 +93,15 @@ public class SlideshowFragment extends Fragment {
                 previewImage(position);
             }
         }, mAlbumFiles);
+
         recyclerView.setAdapter(mAdapter);
 
+/*
+        TextView tv = new TextView(context);
+        tv.setText("lalala");
+        recyclerView.addView(tv);
 
-
-
-
-
+ */
 
         return root;
     }

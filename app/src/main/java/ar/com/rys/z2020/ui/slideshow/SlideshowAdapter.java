@@ -76,7 +76,7 @@ public class SlideshowAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         switch (viewType) {
             case AlbumFile.TYPE_IMAGE: {
-                return new ImageViewHolder(mInflater.inflate(R.layout.item_content_image, parent, false), mItemClickListener);
+                return new ImageViewHolder(mInflater.inflate(R.layout.item_content_maps_image, parent, false), mItemClickListener);
             }
             default: {
                 throw new AssertionError("This should not be the case.");
@@ -104,13 +104,14 @@ public class SlideshowAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
         private final OnItemClickListener mItemClickListener;
         private ImageView mIvImage;
-        private TextView mTvDuration;
+        //private TextView mTvDuration;
 
         ImageViewHolder(View itemView, OnItemClickListener itemClickListener) {
             super(itemView);
             this.mItemClickListener = itemClickListener;
             this.mIvImage = itemView.findViewById(R.id.iv_album_content_maps_image);
-            this.mTvDuration = itemView.findViewById(com.yanzhenjie.album.R.id.tv_duration);
+            //this.mTvDuration = itemView.findViewById(R.id.textView_maps);
+            //this.mTvDuration.setVisibility(View.VISIBLE);
             itemView.setOnClickListener(this);
         }
 
@@ -118,7 +119,7 @@ public class SlideshowAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             Album.getAlbumConfig().
                     getAlbumLoader().
                     load(mIvImage, albumFile);
-            mTvDuration.setText("lalala");
+            //mTvDuration.setText("lalala");
         }
 
         @Override
@@ -129,34 +130,6 @@ public class SlideshowAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         }
     }
 
-    private static class VideoViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        private final OnItemClickListener mItemClickListener;
-
-        private ImageView mIvImage;
-        private TextView mTvDuration;
-
-        VideoViewHolder(View itemView, OnItemClickListener itemClickListener) {
-            super(itemView);
-            this.mItemClickListener = itemClickListener;
-            this.mIvImage = itemView.findViewById(com.yanzhenjie.album.R.id.iv_album_content_image);
-            this.mTvDuration = itemView.findViewById(com.yanzhenjie.album.R.id.tv_duration);
-            itemView.setOnClickListener(this);
-        }
-
-        void setData(AlbumFile albumFile) {
-            Album.getAlbumConfig().
-                    getAlbumLoader().
-                    load(mIvImage, albumFile);
-            mTvDuration.setText(AlbumUtils.convertDuration(albumFile.getDuration()));
-        }
-
-        @Override
-        public void onClick(View v) {
-            if (mItemClickListener != null) {
-                mItemClickListener.onItemClick(v, getAdapterPosition());
-            }
-        }
-    }
 
 }

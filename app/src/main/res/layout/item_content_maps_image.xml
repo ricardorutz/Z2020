@@ -19,22 +19,6 @@
     style="@style/Album.MatchParent"
     android:contentDescription="@string/menu_gallery"
     android:scaleType="centerCrop" >
-
-
-    <TextView
-        android:id="@+id/tv_duration"
-        style="@style/Album.WrapContent"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/album_dp_6"
-        android:layout_marginLeft="@dimen/album_dp_6"
-        android:layout_marginStart="@dimen/album_dp_6"
-        android:drawablePadding="@dimen/album_dp_4"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:textColor="@color/albumFontLight" />
-
-
-
 </com.yanzhenjie.album.widget.SquareImageView>
 
 
