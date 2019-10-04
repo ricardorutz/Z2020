@@ -17,3 +17,7 @@ jobs:
       run: chmod 0755 ./gradlew
     - name: Build with Gradle
       run: ./gradlew build
+    - name: Publish Code Coverage
+      env:
+        global: COVERALLS_REPO_TOKEN=pf8z2WOlHk6C46hyyoL5ZNR7Kgya14PqZ
+      run: ./gradlew coveralls -PpreDexEnable=false
