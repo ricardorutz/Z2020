@@ -21,4 +21,8 @@
     <string name="home_item_mayor">Złaz jest przewidziany dla starszych Wędrowników i Wędrowniczek powyżej lat 18 tu</string>
     <string name="title_activity_trasy">Map</string>
 
+    <string name="trasa_bsas">Trasa w Buenos Aires</string>
+    <string name="trasa_sma">Trasa w San Martin de los Andes</string>
+    <string name="trasa_wedro">Trasa wedrówki</string>
+
 </resources>

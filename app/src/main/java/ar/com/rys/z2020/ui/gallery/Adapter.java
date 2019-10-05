@@ -76,7 +76,7 @@ public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         switch (viewType) {
             case AlbumFile.TYPE_IMAGE: {
-                return new ImageViewHolder(mInflater.inflate(R.layout.item_content_image, parent, false), mItemClickListener);
+                return new ImageViewHolder(mInflater.inflate(R.layout.fragment_gallery_item_content_image, parent, false), mItemClickListener);
             }
             default: {
                 throw new AssertionError("This should not be the case.");

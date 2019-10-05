@@ -30,16 +30,11 @@ public class HomeFragment extends Fragment {
         listOfTexts = prepareList();
 
         ArrayAdapter arrayAdapter = new ArrayAdapter<Integer>(
-                root.getContext(), R.layout.list_item, listOfTexts);
+                root.getContext(), R.layout.fragment_home_list_item, listOfTexts);
 
 
 
-
-
-
-
-
-        HomeAdapter nAdapter = new HomeAdapter(root.getContext(), R.layout.list_item, listOfTexts);
+        HomeAdapter nAdapter = new HomeAdapter(root.getContext(), R.layout.fragment_home_list_item, listOfTexts);
 
 
         ListView listView = root.findViewById(R.id.listView);
