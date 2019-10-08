@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.common.util.CollectionUtils;
 import com.yanzhenjie.album.Action;
 import com.yanzhenjie.album.Album;
 import com.yanzhenjie.album.AlbumFile;
@@ -21,8 +20,10 @@ import com.yanzhenjie.album.widget.divider.Api21ItemDivider;
 import com.yanzhenjie.album.widget.divider.Divider;
 
 
+import org.apache.commons.collections4.CollectionUtils;
+
 import java.util.ArrayList;
-import java.util.Collections;
+
 import java.util.List;
 
 import ar.com.rys.z2020.R;
