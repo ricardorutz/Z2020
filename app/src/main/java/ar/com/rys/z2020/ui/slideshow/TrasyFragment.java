@@ -86,7 +86,7 @@ public class TrasyFragment extends Fragment {
         recyclerView.setLayoutManager(linear);
 
         //Divider divider = new Api21ItemDivider(Color.TRANSPARENT, 10, 10);
-        Divider divider = new Api21ItemDivider(Color.BLACK, 10, 10);
+        Divider divider = new Api21ItemDivider(Color.TRANSPARENT, 10, 100);
         recyclerView.addItemDecoration(divider);
 
         mAdapter = new TrasyAdapter(context, new OnItemClickListener() {
