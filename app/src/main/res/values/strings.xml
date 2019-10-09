@@ -25,4 +25,11 @@
     <string name="trasa_sma">Trasa w San Martin de los Andes</string>
     <string name="trasa_wedro">Trasa wedrówki</string>
 
+    <string name="suff_day">D</string>
+    <string name="suff_hours">G</string>
+    <string name="suff_min">M</string>
+    <string name="suff_sec">S</string>
+
+
+
 </resources>

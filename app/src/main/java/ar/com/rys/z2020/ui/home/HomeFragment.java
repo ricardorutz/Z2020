@@ -13,20 +13,18 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 
-import com.asp.fliptimerviewlibrary.CountDownClock;
+
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 
-import ar.com.rys.z2020.MainActivity;
+
+
 import ar.com.rys.z2020.R;
-import ar.com.rys.z2020.ui.home.HomeAdapter;
 import cn.iwgang.countdownview.CountdownView;
-import ticker.views.com.ticker.widgets.circular.timer.callbacks.CircularViewCallback;
-import ticker.views.com.ticker.widgets.circular.timer.view.CircularView;
+
 
 //http://www.technotalkative.com/android-bullets-in-listview/
 
