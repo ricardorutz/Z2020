@@ -15,34 +15,34 @@
         tools:layout_editor_absoluteX="191dp"
         tools:layout_editor_absoluteY="193dp">
 
+
         <cn.iwgang.countdownview.CountdownView
-            android:id="@+id/cv_countdownViewTest1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/cv_countdownView"
+            android:layout_width="match_parent"
+            android:layout_height="217dp"
             app:isHideTimeBackground="false"
-            app:timeBgColor="#07B39E"
-            app:timeBgSize="15sp"
-            app:timeBgRadius="20dp"
-            app:timeBgDivisionLineColor="#C8FF0606"
-            app:timeBgDivisionLineSize="5dp"
-            app:isShowTimeBgDivisionLine="false"
             app:isShowDay="true"
             app:isShowHour="true"
+            app:isShowMillisecond="false"
             app:isShowMinute="true"
             app:isShowSecond="true"
-            app:isShowMillisecond="false"
-            app:timeTextColor="#000000"
-            app:timeTextSize="50sp"
+            app:isShowTimeBgDivisionLine="false"
             app:isTimeTextBold="true"
-            app:suffixGravity="bottom"
-            app:suffixTextColor="#000000"
-            app:suffixTextSize="15sp"
             app:suffix=":"
             app:suffixDay="@string/suff_day"
+            app:suffixGravity="bottom"
             app:suffixHour="@string/suff_hours"
             app:suffixMinute="@string/suff_min"
-            app:suffixSecond="@string/suff_sec"/>
-
+            app:suffixSecond="@string/suff_sec"
+            app:suffixTextColor="#000000"
+            app:suffixTextSize="20sp"
+            app:timeBgColor="#5363AA"
+            app:timeBgDivisionLineColor="#C8FF0606"
+            app:timeBgDivisionLineSize="5dp"
+            app:timeBgRadius="25dp"
+            app:timeBgSize="15sp"
+            app:timeTextColor="#000000"
+            app:timeTextSize="60sp" />
 
         <ListView
             android:id="@+id/listView"

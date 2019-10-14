@@ -45,8 +45,8 @@ public class HomeFragment extends Fragment {
         Calendar today = Calendar.getInstance();
 
         Calendar cal = Calendar.getInstance();
-        cal.set(Calendar.YEAR, 2020);
-        cal.set(Calendar.MONTH, Calendar.JANUARY);
+        cal.set(Calendar.YEAR, 2019);
+        cal.set(Calendar.MONTH, Calendar.DECEMBER);
         cal.set(Calendar.DAY_OF_MONTH, 30);
 
 
@@ -54,8 +54,8 @@ public class HomeFragment extends Fragment {
         long timeTo = cal.getTimeInMillis()-today.getTimeInMillis();
 
 
-        CountdownView mCvCountdownView = root.findViewById(R.id.cv_countdownViewTest1);
-        mCvCountdownView.start(995550000); // Millisecond
+        CountdownView mCvCountdownView = root.findViewById(R.id.cv_countdownView);
+        mCvCountdownView.start(timeTo); // Millisecond
 
         HomeAdapter nAdapter = new HomeAdapter(root.getContext(), R.layout.fragment_home_list_item, listOfTexts);
 
