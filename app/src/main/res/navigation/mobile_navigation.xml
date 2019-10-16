@@ -25,9 +25,9 @@
 
     <fragment
         android:id="@+id/nav_tools"
-        android:name="ar.com.rys.z2020.ui.tools.ToolsFragment"
+        android:name="ar.com.rys.z2020.ui.tools.CallendarFragment"
         android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
+        tools:layout="@layout/fragment_callendar" />
 
     <fragment
         android:id="@+id/nav_share"

@@ -13,7 +13,7 @@
         android:padding="5dp"
         android:textSize="20sp"
         android:text="List Item"
-        android:background="#dd0D67A9"></TextView>
+        android:background="#dd0D67A9"/>
 
     <View
         android:layout_width="match_parent"
