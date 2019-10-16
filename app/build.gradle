@@ -44,6 +44,14 @@ dependencies {
     //https://github.com/iwgang/CountdownView
     implementation 'com.github.iwgang:countdownview:2.1.6'
 
+    //CalendarView https://github.com/Applandeo/Material-Calendar-View/releases
+    implementation 'com.applandeo:material-calendar-view:1.7.0'
+
+    // https://mvnrepository.com/artifact/joda-time/joda-time
+    implementation 'joda-time:joda-time:2.10.4'
+
+
+
 
     //implementation 'com.google.android.gms:play-services-maps:17.0.0'
     //implementation 'org.osmdroid:osmdroid-android:5.6.4'
