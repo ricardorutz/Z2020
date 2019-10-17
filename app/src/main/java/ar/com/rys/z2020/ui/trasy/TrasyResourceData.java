@@ -1,4 +1,4 @@
-package ar.com.rys.z2020.ui.slideshow;
+package ar.com.rys.z2020.ui.trasy;
 
 import com.yanzhenjie.album.AlbumFile;
 

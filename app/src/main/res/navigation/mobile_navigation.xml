@@ -19,13 +19,13 @@
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="ar.com.rys.z2020.ui.slideshow.TrasyFragment"
+        android:name="ar.com.rys.z2020.ui.trasy.TrasyFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_trasy" />
 
     <fragment
         android:id="@+id/nav_tools"
-        android:name="ar.com.rys.z2020.ui.tools.CallendarFragment"
+        android:name="ar.com.rys.z2020.ui.callendar.CallendarFragment"
         android:label="@string/menu_tools"
         tools:layout="@layout/fragment_callendar" />
 
