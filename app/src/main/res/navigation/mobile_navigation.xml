@@ -18,22 +18,24 @@
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_paths"
         android:name="ar.com.rys.z2020.ui.trasy.TrasyFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_trasy" />
 
     <fragment
-        android:id="@+id/nav_tools"
+        android:id="@+id/nav_calendar"
         android:name="ar.com.rys.z2020.ui.callendar.CallendarFragment"
         android:label="@string/menu_tools"
         tools:layout="@layout/fragment_callendar" />
 
     <fragment
-        android:id="@+id/nav_klimat"
+        android:id="@+id/nav_weather"
         android:name="ar.com.rys.z2020.ui.weather.WeatherFragment"
         android:label="@string/menu_klimat"
         tools:layout="@layout/fragment_weather" />
+
+<!--
 
     <fragment
         android:id="@+id/nav_share"
@@ -46,4 +48,7 @@
         android:name="ar.com.rys.z2020.ui.send.SendFragment"
         android:label="@string/menu_send"
         tools:layout="@layout/fragment_send" />
+
+-->
+
 </navigation>

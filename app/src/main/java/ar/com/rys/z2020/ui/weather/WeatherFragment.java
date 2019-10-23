@@ -10,13 +10,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.yanzhenjie.album.Action;
-import com.yanzhenjie.album.Album;
-import com.yanzhenjie.album.AlbumFile;
-import com.yanzhenjie.album.impl.OnItemClickListener;
 import com.yanzhenjie.album.widget.divider.Api21ItemDivider;
 import com.yanzhenjie.album.widget.divider.Divider;
 
@@ -29,23 +24,35 @@ import ar.com.rys.z2020.R;
 
 public class WeatherFragment extends Fragment {
 
-
-
     private WeatherAdapter mAdapter;
-    //private ArrayList<AlbumFile> mAlbumFiles = new ArrayList<>();
     private List<WeatherResourceData> allResourcesData = new ArrayList<>();
 
 
     public  static Integer[] imagesString = {
-            R.drawable.trasa_w_bsas,
-            R.drawable.trasa_w_sma,
-            R.drawable.trasa_wedrowki,
+            R.drawable.ic_cloud_sun_solid,
+            R.drawable.ic_cloud_sun_rain_solid,
+            R.drawable.ic_cloud_sun_rain_solid,
+            R.drawable.ic_cloud_sun_rain_solid,
+            R.drawable.ic_cloud_sun_rain_solid,
+            R.drawable.ic_cloud_sun_rain_solid,
+            R.drawable.ic_cloud_sun_rain_solid,
+            R.drawable.ic_cloud_sun_rain_solid,
+            R.drawable.ic_cloud_sun_rain_solid,
+            R.drawable.ic_cloud_sun_rain_solid,
     };
 
-    public  static int[] titles = {
-            R.string.trasa_bsas,
-            R.string.trasa_sma,
-            R.string.trasa_wedro,
+
+    public  static int[] namesAndNumberOfDates = {
+            R.string.date_1,
+            R.string.date_2,
+            R.string.date_3,
+            R.string.date_4,
+            R.string.date_5,
+            R.string.date_6,
+            R.string.date_7,
+            R.string.date_8,
+            R.string.date_9,
+            R.string.date_10
     };
 
 
@@ -55,7 +62,7 @@ public class WeatherFragment extends Fragment {
             for (int i = 0; i<imagesString.length; i++){
                 WeatherResourceData trasyResourceData = new WeatherResourceData();
                 trasyResourceData.setImagesResource(imagesString[i]);
-                trasyResourceData.setImageTitle(getString(titles[i]));
+                trasyResourceData.setDateNameAndNumber(getString(namesAndNumberOfDates[i]));
                 allResourcesData.add(trasyResourceData);
             }
         }
@@ -76,68 +83,20 @@ public class WeatherFragment extends Fragment {
 
         final Context context = this.getContext();
 
-        RecyclerView recyclerView = root.findViewById(R.id.recycler_maps_view);
+        RecyclerView recyclerView = root.findViewById(R.id.recycler_weather_view);
 
 
         recyclerView.setLayoutManager(new GridLayoutManager(context, 3));
 
 
-
-        //Divider divider = new Api21ItemDivider(Color.TRANSPARENT, 10, 10);
-        Divider divider = new Api21ItemDivider(Color.BLACK, 10, 100);
+        Divider divider = new Api21ItemDivider(Color.BLACK, 5, 5);
         recyclerView.addItemDecoration(divider);
 
-        mAdapter = new WeatherAdapter(context, new OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-                previewImage(position);
-            }
-        }, allResourcesData);
+        mAdapter = new WeatherAdapter(context, allResourcesData);
 
         recyclerView.setAdapter(mAdapter);
 
         return root;
     }
 
-    private ArrayList<AlbumFile> getAlbumFiles(){
-
-        ArrayList<AlbumFile> mAlbumFiles = new ArrayList<>();
-
-        allResourcesData.forEach(p->{
-            mAlbumFiles.add(p.getAlbumFile());
-        });
-
-        return mAlbumFiles;
-
-    }
-
-
-    private void previewImage(int position) {
-        if (allResourcesData == null || allResourcesData.size() == 0) {
-            //Toast.makeText(this, R.string.no_selected, Toast.LENGTH_LONG).show();
-        } else {
-            Album.galleryAlbum(this)
-                    .checkable(false)
-                    .checkedList(getAlbumFiles())
-                    .currentPosition(position)
-                    /*
-                    .widget(
-                            Widget.newDarkBuilder(this)
-                                    .title(mToolbar.getTitle().toString())
-                                    .build()
-                    )
-                    */
-                    .onResult(new Action<ArrayList<AlbumFile>>() {
-                        @Override
-                        public void onAction(@NonNull ArrayList<AlbumFile> result) {
-                            /*
-                            mAlbumFiles = result;
-                            mAdapter.notifyDataSetChanged(mAlbumFiles);
-
-                             */
-                        }
-                    })
-                    .start();
-        }
-    }
 }

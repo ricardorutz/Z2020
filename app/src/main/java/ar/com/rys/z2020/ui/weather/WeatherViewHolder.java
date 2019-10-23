@@ -1,46 +1,29 @@
 package ar.com.rys.z2020.ui.weather;
 
+import android.graphics.drawable.Icon;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.yanzhenjie.album.Album;
-import com.yanzhenjie.album.AlbumFile;
-import com.yanzhenjie.album.impl.OnItemClickListener;
-
 import ar.com.rys.z2020.R;
 
-public class WeatherViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+public class WeatherViewHolder extends RecyclerView.ViewHolder {
 
-    private final OnItemClickListener mItemClickListener;
     private ImageView trasyImageView;
     private TextView trasyTextView;
-    //private TextView mTvDuration;
 
-    WeatherViewHolder(View itemView, OnItemClickListener itemClickListener) {
+    WeatherViewHolder(View itemView) {
         super(itemView);
-        this.mItemClickListener = itemClickListener;
-        this.trasyImageView = itemView.findViewById(R.id.iv_trasy_content_maps_image);
-        this.trasyTextView = itemView.findViewById(R.id.tv_trasy_content_maps_title);
-        //this.mTvDuration = itemView.findViewById(R.id.textView_maps);
-        //this.mTvDuration.setVisibility(View.VISIBLE);
-        itemView.setOnClickListener(this);
+        this.trasyImageView = itemView.findViewById(R.id.imageViewWeatherIcon);
+        this.trasyTextView = itemView.findViewById(R.id.textViewDate);
     }
 
-    public void setData(AlbumFile albumFile, String title) {
-        //Album.getAlbumConfig().
-        //        getAlbumLoader().
-        //        load(trasyImageView, albumFile);
-
-        this.trasyTextView.setText(title);
+    public void setData(WeatherResourceData data) {
+        this.trasyTextView.setText(data.getDateNameAndNumber());
+        this.trasyImageView.setImageResource(Integer.parseInt(data.getImagesResource()));
     }
 
-    @Override
-    public void onClick(View v) {
-        if (mItemClickListener != null) {
-            mItemClickListener.onItemClick(v, getAdapterPosition());
-        }
-    }
+
 }

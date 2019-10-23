@@ -13,18 +13,19 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_gallery" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_paths"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow" />
         <item
-            android:id="@+id/nav_tools"
+            android:id="@+id/nav_calendar"
             android:icon="@drawable/ic_calendar_alt_solid"
             android:title="@string/menu_tools" />
 
         <item
-            android:id="@+id/nav_klimat"
+            android:id="@+id/nav_weather"
             android:icon="@drawable/ic_weather_solid"
             android:title="@string/menu_klimat" />
+
     </group>
 <!--
     <item android:title="Communicate">

@@ -1,12 +1,28 @@
 package ar.com.rys.z2020.ui.weather;
 
-import com.yanzhenjie.album.AlbumFile;
-
 public class WeatherResourceData {
 
     private int imagesResource;
-    private String imageTitle;
-    private AlbumFile albumFile;
+    private String dateNameAndNumber;
+    private int temperature;
+    private int historicTemperature;
+
+
+    public String getHistoricTemperature() {
+        return String.valueOf(historicTemperature);
+    }
+
+    public void setHistoricTemperature(int historicTemperature) {
+        this.historicTemperature = historicTemperature;
+    }
+
+    public String getTemperature() {
+        return String.valueOf(temperature);
+    }
+
+    public void setTemperature(int temperature) {
+        this.temperature = temperature;
+    }
 
     public String getImagesResource() {
         return String.valueOf(imagesResource);
@@ -16,22 +32,12 @@ public class WeatherResourceData {
         this.imagesResource = imagesResource;
     }
 
-    public String getImageTitle() {
-        return String.valueOf(imageTitle);
+    public String getDateNameAndNumber() {
+        return String.valueOf(dateNameAndNumber);
     }
 
-    public void setImageTitle(String imageTitle) {
-        this.imageTitle = imageTitle;
+    public void setDateNameAndNumber(String dateNameAndNumber) {
+        this.dateNameAndNumber = dateNameAndNumber;
     }
 
-    public AlbumFile getAlbumFile(){
-
-        if(albumFile==null){
-            albumFile = new AlbumFile();
-            albumFile.setMediaType(AlbumFile.TYPE_IMAGE);
-            albumFile.setPath(getImagesResource());
-        }
-
-        return albumFile;
-    }
 }

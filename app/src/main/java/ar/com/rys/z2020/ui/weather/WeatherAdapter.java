@@ -29,49 +29,28 @@ import java.util.List;
 
 import ar.com.rys.z2020.R;
 
-/**
- * <p>Image adapter.</p>
- * Created by Yan Zhenjie on 2016/10/30.
- */
+
 public class WeatherAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private LayoutInflater mInflater;
-    private OnItemClickListener mItemClickListener;
-
     private List<WeatherResourceData> trasyResourceDataList;
 
-    public WeatherAdapter(Context context, OnItemClickListener onItemClickListener, List<WeatherResourceData> mAlbumFiles) {
+    public WeatherAdapter(Context context, List<WeatherResourceData> mAlbumFiles) {
         this.mInflater = LayoutInflater.from(context);
-        this.mItemClickListener = onItemClickListener;
         this.trasyResourceDataList = mAlbumFiles;
-    }
-
-    public void notifyDataSetChanged(List<WeatherResourceData> imagePathList) {
-        this.trasyResourceDataList = imagePathList;
-        super.notifyDataSetChanged();
-    }
-
-    @Override
-    public int getItemViewType(int position) {
-        return AlbumFile.TYPE_IMAGE;
     }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        switch (viewType) {
-            case AlbumFile.TYPE_IMAGE: {
-                return new WeatherViewHolder(mInflater.inflate(R.layout.fragment_weather_item_content_image, parent, false), mItemClickListener);
-            }
-            default: {
-                throw new AssertionError("This should not be the case.");
-            }
-        }
+
+        return new WeatherViewHolder(mInflater.inflate(R.layout.fragment_weather_item_content_image, parent, false));
+
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
-        ((WeatherViewHolder) holder).setData(trasyResourceDataList.get(position).getAlbumFile(), trasyResourceDataList.get(position).getImageTitle());
+        ((WeatherViewHolder) holder).setData(trasyResourceDataList.get(position));
 
     }
 
