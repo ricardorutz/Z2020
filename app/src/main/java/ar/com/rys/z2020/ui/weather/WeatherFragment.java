@@ -111,9 +111,26 @@ public class WeatherFragment extends Fragment {
 
         final Context context = this.getContext();
 
+
+        //recycler_weather_view_bsas
+
+        RecyclerView recyclerViewBsAs = root.findViewById(R.id.recycler_weather_view_bsas);
+        recyclerViewBsAs.setLayoutManager(new GridLayoutManager(context, 3));
+
+
+        Divider dividerBsAs = new Api21ItemDivider(Color.BLACK, 5, 5);
+        recyclerViewBsAs.addItemDecoration(dividerBsAs);
+
+        mAdapter = new WeatherAdapter(context, allResourcesData);
+
+        recyclerViewBsAs.setAdapter(mAdapter);
+
+
+
+
+
+
         RecyclerView recyclerView = root.findViewById(R.id.recycler_weather_view);
-
-
         recyclerView.setLayoutManager(new GridLayoutManager(context, 3));
 
 

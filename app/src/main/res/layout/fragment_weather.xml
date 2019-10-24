@@ -1,5 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/activity_main"
+    android:background="@drawable/huahum"
+    tools:context="ar.com.rys.z2020.ui.weather.WeatherFragment">
+
+    <TextView
+        android:id="@+id/textViewSma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="lalalala"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_weather_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <TextView
+        android:id="@+id/textViewBsas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="lalalala2"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_weather_view_bsas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>
+<!--
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,19 +57,6 @@
     android:background="@drawable/huahum"
     tools:context="ar.com.rys.z2020.ui.weather.WeatherFragment">
 
-    <!--
-
-    <TextView
-        android:id="@+id/textView_maps"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <ImageView
-        android:id="@+id/image_maps_view"
-        style="@style/Album.WrapContent" />
--->
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_weather_view"
@@ -38,3 +69,4 @@
 
 
 </RelativeLayout>
+-->

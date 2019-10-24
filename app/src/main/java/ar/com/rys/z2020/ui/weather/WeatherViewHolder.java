@@ -18,7 +18,7 @@ public class WeatherViewHolder extends RecyclerView.ViewHolder {
     WeatherViewHolder(View itemView) {
         super(itemView);
         this.imageViewWeatherIcon = itemView.findViewById(R.id.imageViewWeatherIcon);
-        this.textViewDate = itemView.findViewById(R.id.textViewDate);
+        this.textViewDate = itemView.findViewById(R.id.textViewSma);
         this.textViewFutureTemperature = itemView.findViewById(R.id.textViewFutureTemperature);
         this.textViewHistoricTemperature = itemView.findViewById(R.id.textViewHistoricTemperature);
     }
