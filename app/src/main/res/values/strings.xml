@@ -45,5 +45,26 @@
     <string name="date_10">Śr. 08/01</string>
 
 
+    <string name="temperature_sm__1">20°/4°</string>
+    <string name="temperature_sm__2">18°/3°</string>
+    <string name="temperature_sm__3">19°/5°</string>
+    <string name="temperature_sm__4">20°/5°</string>
+    <string name="temperature_sm__5">19°/5°</string>
+    <string name="temperature_sm__6">19°/5°</string>
+    <string name="temperature_sm__7">23°/8°</string>
+    <string name="temperature_sm__8">24°/9°</string>
+    <string name="temperature_sm__9">20°/9°</string>
+    <string name="temperature_sm__10">21°/6°</string>
+
+    <string name="h_temperature_sm__1">21°/9°</string>
+    <string name="h_temperature_sm__2">21°/9°</string>
+    <string name="h_temperature_sm__3">22°/9°</string>
+    <string name="h_temperature_sm__4">22°/9°</string>
+    <string name="h_temperature_sm__5">22°/9°</string>
+    <string name="h_temperature_sm__6">22°/9°</string>
+    <string name="h_temperature_sm__7">22°/9°</string>
+    <string name="h_temperature_sm__8">22°/9°</string>
+    <string name="h_temperature_sm__9">23°/9°</string>
+    <string name="h_temperature_sm__10">23°/9°</string>
 
 </resources>

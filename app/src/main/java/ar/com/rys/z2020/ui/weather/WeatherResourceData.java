@@ -4,15 +4,15 @@ public class WeatherResourceData {
 
     private int imagesResource;
     private String dateNameAndNumber;
-    private int temperature;
-    private int historicTemperature;
+    private String temperature;
+    private String historicTemperature;
 
 
     public String getHistoricTemperature() {
         return String.valueOf(historicTemperature);
     }
 
-    public void setHistoricTemperature(int historicTemperature) {
+    public void setHistoricTemperature(String historicTemperature) {
         this.historicTemperature = historicTemperature;
     }
 
@@ -20,7 +20,7 @@ public class WeatherResourceData {
         return String.valueOf(temperature);
     }
 
-    public void setTemperature(int temperature) {
+    public void setTemperature(String temperature) {
         this.temperature = temperature;
     }
 

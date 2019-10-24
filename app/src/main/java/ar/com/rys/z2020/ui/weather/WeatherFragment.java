@@ -30,15 +30,15 @@ public class WeatherFragment extends Fragment {
 
     public  static Integer[] imagesString = {
             R.drawable.ic_cloud_sun_solid,
+            R.drawable.ic_cloud_showers_heavy_solid,
+            R.drawable.ic_cloud_sun_solid,
+            R.drawable.ic_cloud_sun_solid,
+            R.drawable.ic_cloud_showers_heavy_solid,
+            R.drawable.ic_cloud_sun_solid,
+            R.drawable.ic_cloud_sun_solid,
+            R.drawable.ic_cloud_sun_solid,
             R.drawable.ic_cloud_sun_rain_solid,
-            R.drawable.ic_cloud_sun_rain_solid,
-            R.drawable.ic_cloud_sun_rain_solid,
-            R.drawable.ic_cloud_sun_rain_solid,
-            R.drawable.ic_cloud_sun_rain_solid,
-            R.drawable.ic_cloud_sun_rain_solid,
-            R.drawable.ic_cloud_sun_rain_solid,
-            R.drawable.ic_cloud_sun_rain_solid,
-            R.drawable.ic_cloud_sun_rain_solid,
+            R.drawable.ic_cloud_sun_solid,
     };
 
 
@@ -55,15 +55,43 @@ public class WeatherFragment extends Fragment {
             R.string.date_10
     };
 
+    public  static int[] historic_temperatures = {
+            R.string.h_temperature_sm__1,
+            R.string.h_temperature_sm__2,
+            R.string.h_temperature_sm__3,
+            R.string.h_temperature_sm__4,
+            R.string.h_temperature_sm__5,
+            R.string.h_temperature_sm__6,
+            R.string.h_temperature_sm__7,
+            R.string.h_temperature_sm__8,
+            R.string.h_temperature_sm__9,
+            R.string.h_temperature_sm__10
+    };
+
+    public  static int[] temperatures = {
+            R.string.temperature_sm__1,
+            R.string.temperature_sm__2,
+            R.string.temperature_sm__3,
+            R.string.temperature_sm__4,
+            R.string.temperature_sm__5,
+            R.string.temperature_sm__6,
+            R.string.temperature_sm__7,
+            R.string.temperature_sm__8,
+            R.string.temperature_sm__9,
+            R.string.temperature_sm__10
+    };
+
 
     private void loadData(){
 
         if(CollectionUtils.isEmpty(allResourcesData)){
             for (int i = 0; i<imagesString.length; i++){
-                WeatherResourceData trasyResourceData = new WeatherResourceData();
-                trasyResourceData.setImagesResource(imagesString[i]);
-                trasyResourceData.setDateNameAndNumber(getString(namesAndNumberOfDates[i]));
-                allResourcesData.add(trasyResourceData);
+                WeatherResourceData weatherResourceData = new WeatherResourceData();
+                weatherResourceData.setImagesResource(imagesString[i]);
+                weatherResourceData.setDateNameAndNumber(getString(namesAndNumberOfDates[i]));
+                weatherResourceData.setTemperature(getString(temperatures[i]));
+                weatherResourceData.setHistoricTemperature(getString(historic_temperatures[i]));
+                allResourcesData.add(weatherResourceData);
             }
         }
 

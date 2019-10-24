@@ -10,14 +10,14 @@
         <TextView
             android:id="@+id/textViewDate"
             android:layout_width="match_parent"
-            android:layout_height="37dp"
-            android:textSize="18sp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imageViewWeatherIcon"
             android:layout_width="match_parent"
-            android:layout_height="50dp"/>
+            android:layout_height="25dp"/>
             <!--
             app:srcCompat="@drawable/ic_cloud_sun_rain_solid"
             -->
@@ -26,24 +26,22 @@
         <TextView
             android:id="@+id/textViewFutureTemperature"
             android:layout_width="match_parent"
-            android:layout_height="39dp"
-            android:text="22°/6°"
-            android:textSize="22sp"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewHistoricMedia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:text="@string/historic_media" />
 
         <TextView
             android:id="@+id/textViewHistoricTemperature"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="21°/9°" />
+            android:textSize="14sp"/>
 
 
 </LinearLayout>
