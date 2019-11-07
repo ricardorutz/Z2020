@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/activity_main"
+    android:background="@drawable/huahum"
+    tools:context="ar.com.rys.z2020.ui.weather.WeatherFragment">
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="lalalala2"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_weather_view_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>

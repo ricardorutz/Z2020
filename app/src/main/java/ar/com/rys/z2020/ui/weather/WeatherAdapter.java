@@ -22,9 +22,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.yanzhenjie.album.AlbumFile;
-import com.yanzhenjie.album.impl.OnItemClickListener;
-
 import java.util.List;
 
 import ar.com.rys.z2020.R;
@@ -33,11 +30,11 @@ import ar.com.rys.z2020.R;
 public class WeatherAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private LayoutInflater mInflater;
-    private List<WeatherResourceData> trasyResourceDataList;
+    private List<WeatherResourceData> weatherResourceDataList;
 
-    public WeatherAdapter(Context context, List<WeatherResourceData> mAlbumFiles) {
+    public WeatherAdapter(Context context, List<WeatherResourceData> weatherFiles) {
         this.mInflater = LayoutInflater.from(context);
-        this.trasyResourceDataList = mAlbumFiles;
+        this.weatherResourceDataList = weatherFiles;
     }
 
     @Override
@@ -50,14 +47,14 @@ public class WeatherAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
-        ((WeatherViewHolder) holder).setData(trasyResourceDataList.get(position));
+        ((WeatherViewHolder) holder).setData(weatherResourceDataList.get(position));
 
     }
 
     @Override
     public int getItemCount() {
 
-        return trasyResourceDataList == null ? 0 : trasyResourceDataList.size();
+        return weatherResourceDataList == null ? 0 : weatherResourceDataList.size();
 
     }
 
