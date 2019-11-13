@@ -6,6 +6,7 @@ import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -19,7 +20,7 @@ public class WeatherStaticDataDeclaration {
         context=c;
     }
 
-    private Map<String, List<WeatherResourceData>> allData = new HashMap<>();
+    private LinkedHashMap<String, List<WeatherResourceData>> allData = new LinkedHashMap<>();
     private List<WeatherResourceData> allResourcesData = new ArrayList<>();
 
     public  static Integer[] imagesString = {
@@ -88,11 +89,16 @@ public class WeatherStaticDataDeclaration {
             }
         }
 
+
+
+        allData.put(context.getString(R.string.title_sma), allResourcesData);
+        allData.put(context.getString(R.string.title_bsas), allResourcesData);
+
     }
 
-    public List<WeatherResourceData>  getAllResourcesData(){
-        return allResourcesData;
-    }
 
+    public LinkedHashMap<String, List<WeatherResourceData>> getMap(){
+        return  allData;
+    }
 
 }

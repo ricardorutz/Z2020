@@ -8,14 +8,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import ar.com.rys.z2020.R;
 
-public class WeatherViewHolder extends RecyclerView.ViewHolder {
+public class WeatherDetailsViewHolder extends RecyclerView.ViewHolder {
 
     private ImageView imageViewWeatherIcon;
     private TextView textViewDate;
     private TextView textViewFutureTemperature;
     private  TextView textViewHistoricTemperature;
 
-    WeatherViewHolder(View itemView) {
+    WeatherDetailsViewHolder(View itemView) {
         super(itemView);
         this.imageViewWeatherIcon = itemView.findViewById(R.id.imageViewWeatherIcon);
         this.textViewDate = itemView.findViewById(R.id.textViewSma);

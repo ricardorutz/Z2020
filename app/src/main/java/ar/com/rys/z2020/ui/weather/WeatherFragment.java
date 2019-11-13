@@ -26,29 +26,8 @@ import ar.com.rys.z2020.R;
 
 public class WeatherFragment extends Fragment {
 
-    private WeatherAdapter mAdapter;
+    private WeatherGeneralAdapter mAdapter;
     private Map<String, List<WeatherResourceData>> allData = new HashMap<>();
-
-
-/*
-    private void loadData(){
-
-        if(CollectionUtils.isEmpty(allResourcesData)){
-            for (int i = 0; i<
-                    imagesString.length; i++){
-                WeatherResourceData weatherResourceData = new WeatherResourceData();
-                weatherResourceData.setImagesResource(imagesString[i]);
-                weatherResourceData.setDateNameAndNumber(getString(namesAndNumberOfDates[i]));
-                weatherResourceData.setTemperature(getString(temperatures[i]));
-                weatherResourceData.setHistoricTemperature(getString(historic_temperatures[i]));
-                allResourcesData.add(weatherResourceData);
-            }
-        }
-
-    }
-
- */
-
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -62,37 +41,18 @@ public class WeatherFragment extends Fragment {
 
         w.loadData();
 
-        //loadData();
-
 
         final Context context = this.getContext();
-/*
-        RecyclerView recyclerViewBsAs = root.findViewById(R.id.recycler_weather_view_bsas);
-        recyclerViewBsAs.setLayoutManager(new GridLayoutManager(context, 3));
-
-
-        Divider dividerBsAs = new Api21ItemDivider(Color.BLACK, 5, 5);
-        recyclerViewBsAs.addItemDecoration(dividerBsAs);
-
-        mAdapter = new WeatherAdapter(context, allResourcesData);
-
-        recyclerViewBsAs.setAdapter(mAdapter);
-
- */
-
-
-
-
 
 
         RecyclerView recyclerView = root.findViewById(R.id.recycler_weather_view);
-        recyclerView.setLayoutManager(new GridLayoutManager(context, 3));
+        recyclerView.setLayoutManager(new GridLayoutManager(context, 1));
 
 
         Divider divider = new Api21ItemDivider(Color.BLACK, 5, 5);
         recyclerView.addItemDecoration(divider);
 
-        mAdapter = new WeatherAdapter(context, w.getAllResourcesData());
+        mAdapter = new WeatherGeneralAdapter(context, w.getMap());
 
         recyclerView.setAdapter(mAdapter);
 

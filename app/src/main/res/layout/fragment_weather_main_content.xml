@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/activity_main"
-    android:background="@drawable/huahum"
-    tools:context="ar.com.rys.z2020.ui.weather.WeatherFragment">
+    android:layout_marginTop="10sp">
+
 
         <TextView
             android:id="@+id/textViewTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="lalalala2"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:text=""
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="#D6E9E5"/>
 
 
         <androidx.recyclerview.widget.RecyclerView

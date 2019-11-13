@@ -22,39 +22,45 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import ar.com.rys.z2020.R;
 
 
-public class WeatherAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class WeatherGeneralAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private LayoutInflater mInflater;
-    private List<WeatherResourceData> weatherResourceDataList;
+    private LinkedHashMap<String, List<WeatherResourceData>> allData;
 
-    public WeatherAdapter(Context context, List<WeatherResourceData> weatherFiles) {
+    public WeatherGeneralAdapter(Context context, LinkedHashMap<String, List<WeatherResourceData>> allData) {
         this.mInflater = LayoutInflater.from(context);
-        this.weatherResourceDataList = weatherFiles;
+        this.allData = allData;
     }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        return new WeatherViewHolder(mInflater.inflate(R.layout.fragment_weather_item_content_image, parent, false));
+        return new WeatherViewGeneralHolder(mInflater.inflate(R.layout.fragment_weather_main_content, parent, false));
 
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
-        ((WeatherViewHolder) holder).setData(weatherResourceDataList.get(position));
+        List<String> keyList = new ArrayList<String>(allData.keySet());
+
+        ((WeatherViewGeneralHolder) holder).setData(allData.get(keyList.get(position)), keyList.get(position));
 
     }
 
     @Override
     public int getItemCount() {
 
-        return weatherResourceDataList == null ? 0 : weatherResourceDataList.size();
+        return allData == null ? 0 : allData.size();
 
     }
 
