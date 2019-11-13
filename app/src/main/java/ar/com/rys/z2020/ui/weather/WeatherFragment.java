@@ -39,9 +39,6 @@ public class WeatherFragment extends Fragment {
 
         WeatherStaticDataDeclaration w = new WeatherStaticDataDeclaration(getContext());
 
-        w.loadData();
-
-
         final Context context = this.getContext();
 
 

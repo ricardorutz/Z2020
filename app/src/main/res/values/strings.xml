@@ -59,6 +59,17 @@
     <string name="temperature_sm__9">20°/9°</string>
     <string name="temperature_sm__10">21°/6°</string>
 
+    <string name="temperature_bsas_1">30°/22°</string>
+    <string name="temperature_bsas_2">30°/22°</string>
+    <string name="temperature_bsas_3">29°/21°</string>
+    <string name="temperature_bsas_4">30°/21°</string>
+    <string name="temperature_bsas_5">28°/21°</string>
+    <string name="temperature_bsas_6">27°/21°</string>
+    <string name="temperature_bsas_7">28°/22°</string>
+    <string name="temperature_bsas_8">29°/22°</string>
+    <string name="temperature_bsas_9">30°/22°</string>
+    <string name="temperature_bsas_10">31°/22°</string>
+
     <string name="h_temperature_sm__1">21°/9°</string>
     <string name="h_temperature_sm__2">21°/9°</string>
     <string name="h_temperature_sm__3">22°/9°</string>
@@ -69,5 +80,17 @@
     <string name="h_temperature_sm__8">22°/9°</string>
     <string name="h_temperature_sm__9">23°/9°</string>
     <string name="h_temperature_sm__10">23°/9°</string>
+
+
+    <string name="h_temperature_bsas_1">27°/20°</string>
+    <string name="h_temperature_bsas_2">27°/20°</string>
+    <string name="h_temperature_bsas_3">27°/20°</string>
+    <string name="h_temperature_bsas_4">27°/20°</string>
+    <string name="h_temperature_bsas_5">27°/20°</string>
+    <string name="h_temperature_bsas_6">27°/21°</string>
+    <string name="h_temperature_bsas_7">27°/21°</string>
+    <string name="h_temperature_bsas_8">28°/21°</string>
+    <string name="h_temperature_bsas_9">28°/21°</string>
+    <string name="h_temperature_bsas_10">28°/21°</string>
 
 </resources>
