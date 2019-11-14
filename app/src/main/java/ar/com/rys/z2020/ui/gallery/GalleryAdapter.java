@@ -39,19 +39,19 @@ import ar.com.rys.z2020.R;
  * <p>Image adapter.</p>
  * Created by Yan Zhenjie on 2016/10/30.
  */
-public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class GalleryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private LayoutInflater mInflater;
     private OnItemClickListener mItemClickListener;
 
     private List<AlbumFile> mAlbumFiles;
 
-    public Adapter(Context context, OnItemClickListener itemClickListener) {
+    public GalleryAdapter(Context context, OnItemClickListener itemClickListener) {
         this.mInflater = LayoutInflater.from(context);
         this.mItemClickListener = itemClickListener;
     }
 
-    public Adapter(Context context, OnItemClickListener onItemClickListener, ArrayList<AlbumFile> mAlbumFiles) {
+    public GalleryAdapter(Context context, OnItemClickListener onItemClickListener, ArrayList<AlbumFile> mAlbumFiles) {
         this.mInflater = LayoutInflater.from(context);
         this.mItemClickListener = onItemClickListener;
         this.mAlbumFiles = mAlbumFiles;

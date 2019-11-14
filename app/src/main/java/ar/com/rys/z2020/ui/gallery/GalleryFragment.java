@@ -3,14 +3,9 @@ package ar.com.rys.z2020.ui.gallery;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -19,22 +14,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.yanzhenjie.album.Action;
 import com.yanzhenjie.album.Album;
-import com.yanzhenjie.album.AlbumConfig;
 import com.yanzhenjie.album.AlbumFile;
-import com.yanzhenjie.album.api.widget.Widget;
 import com.yanzhenjie.album.impl.OnItemClickListener;
 import com.yanzhenjie.album.widget.divider.Api21ItemDivider;
 import com.yanzhenjie.album.widget.divider.Divider;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Locale;
 
 import ar.com.rys.z2020.R;
 
 public class GalleryFragment extends Fragment {
 
-    private Adapter mAdapter;
+    private GalleryAdapter mAdapter;
     private ArrayList<AlbumFile> mAlbumFiles = new ArrayList<>();
 
 
@@ -83,7 +75,7 @@ public class GalleryFragment extends Fragment {
         Divider divider = new Api21ItemDivider(Color.TRANSPARENT, 10, 10);
         recyclerView.addItemDecoration(divider);
 
-        mAdapter = new Adapter(context, new OnItemClickListener() {
+        mAdapter = new GalleryAdapter(context, new OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
                 previewImage(position);

@@ -29,6 +29,9 @@
     <string name="title_sma">San Martin de los Andes</string>
     <string name="title_bsas">Buenos Aires</string>
 
+    <string name="title_diciembre">Grudzień</string>
+    <string name="title_enero">Styczeń</string>
+
     <string name="suff_day">D</string>
     <string name="suff_hours">G</string>
     <string name="suff_min">M</string>
@@ -46,6 +49,15 @@
     <string name="date_8">Pon. 06/01</string>
     <string name="date_9">Wt. 07/01</string>
     <string name="date_10">Śr. 08/01</string>
+
+
+    <string name="date_niedz">Niedz.</string>
+    <string name="date_pon">Pon.  </string>
+    <string name="date_wt">Wt.   </string>
+    <string name="date_sr">Śr.   </string>
+    <string name="date_csz">Czw.  </string>
+    <string name="date_pt">Pt.   </string>
+    <string name="date_sob">Sob.  </string>
 
 
     <string name="temperature_sm__1">20°/4°</string>
@@ -92,5 +104,8 @@
     <string name="h_temperature_bsas_8">28°/21°</string>
     <string name="h_temperature_bsas_9">28°/21°</string>
     <string name="h_temperature_bsas_10">28°/21°</string>
+
+
+    <string name="home_message">Czas do rozpoczęcia Złazu</string>
 
 </resources>

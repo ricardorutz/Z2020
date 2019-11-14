@@ -110,7 +110,6 @@
     <orderEntry type="library" name="Gradle: com.github.bumptech.glide:annotations:4.9.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.commons:commons-collections4:4.4@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.annimon:stream:1.2.1@jar" level="project" />
-    <orderEntry type="library" name="Gradle: joda-time:joda-time:2.10.4@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.applandeo:material-calendar-view:1.7.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.navigation:navigation-ui:2.1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.material:material:1.0.0@aar" level="project" />

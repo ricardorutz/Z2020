@@ -33,17 +33,16 @@ public class TrasyFragment extends Fragment {
 
 
     private TrasyAdapter mAdapter;
-    //private ArrayList<AlbumFile> mAlbumFiles = new ArrayList<>();
     private List<TrasyResourceData> allResourcesData = new ArrayList<>();
 
 
-    public  static Integer[] imagesString = {
+    private  static Integer[] imagesString = {
             R.drawable.trasa_w_bsas,
             R.drawable.trasa_w_sma,
             R.drawable.trasa_wedrowki,
     };
 
-    public  static int[] titles = {
+    private  static int[] titles = {
             R.string.trasa_bsas,
             R.string.trasa_sma,
             R.string.trasa_wedro,
@@ -79,14 +78,11 @@ public class TrasyFragment extends Fragment {
 
         RecyclerView recyclerView = root.findViewById(R.id.recycler_maps_view);
 
-
-        //recyclerView.setLayoutManager(new GridLayoutManager(context, 1));
-
         LinearLayoutManager linear = new LinearLayoutManager(context);
         linear.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(linear);
 
-        //Divider divider = new Api21ItemDivider(Color.TRANSPARENT, 10, 10);
+
         Divider divider = new Api21ItemDivider(Color.TRANSPARENT, 10, 100);
         recyclerView.addItemDecoration(divider);
 

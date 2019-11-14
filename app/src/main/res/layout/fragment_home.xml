@@ -16,34 +16,38 @@
         tools:layout_editor_absoluteX="191dp"
         tools:layout_editor_absoluteY="193dp">
 
-
         <cn.iwgang.countdownview.CountdownView
             android:id="@+id/cv_countdownView"
-            android:layout_width="match_parent"
-            android:layout_height="217dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
             app:isHideTimeBackground="false"
             app:isShowDay="true"
             app:isShowHour="true"
             app:isShowMillisecond="false"
             app:isShowMinute="true"
             app:isShowSecond="true"
-            app:isShowTimeBgDivisionLine="false"
-            app:isTimeTextBold="true"
-            app:suffix=":"
-            app:suffixDay="@string/suff_day"
-            app:suffixGravity="bottom"
-            app:suffixHour="@string/suff_hours"
-            app:suffixMinute="@string/suff_min"
-            app:suffixSecond="@string/suff_sec"
+            app:suffixGravity="center"
             app:suffixTextColor="#000000"
-            app:suffixTextSize="20sp"
-            app:timeBgColor="#5363AA"
-            app:timeBgDivisionLineColor="#C8FF0606"
-            app:timeBgDivisionLineSize="5dp"
-            app:timeBgRadius="25dp"
-            app:timeBgSize="15sp"
-            app:timeTextColor="#000000"
-            app:timeTextSize="60sp" />
+            app:suffixTextSize="35sp"
+            app:timeBgDivisionLineSize="1dp"
+            app:timeBgRadius="3dp"
+            app:timeBgSize="75dp"
+            app:timeTextColor="#FFFFFF"
+            app:timeTextSize="35sp"/>
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="@string/home_message"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:textStyle="normal|bold" />
+
+        <!--
 
         <ListView
             android:id="@+id/listView"
@@ -51,6 +55,7 @@
             android:layout_height="wrap_content"
             android:listSelector="@android:color/transparent"
             android:divider="@null"/>
+            -->
 
         <ImageView
             android:id="@+id/imageView2"
