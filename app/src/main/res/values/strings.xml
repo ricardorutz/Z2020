@@ -1,26 +1,16 @@
 <resources>
     <string name="app_name">Z2020</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">ZŁAZ WĘDROWNIKÓW</string>
     <string name="nav_header_subtitle">POD POŁUDNIOWYM KRZYŻEM</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
 
     <string name="menu_home">Strona Główna</string>
     <string name="menu_gallery">Galeria Zdjęć</string>
     <string name="menu_slideshow">Trasy</string>
     <string name="menu_tools">Kalendarz</string>
     <string name="menu_klimat">Pogoda</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
 
     <string name="home_item_termin">Od 30go. grudnia 2019 do 8go. Stycznia 2020.</string>
-    <string name="home_item_temperature">Klimaty</string>
-    <string name="home_item_temperature_bsas">Buenos Aires  20°/35°</string>
-    <string name="home_item_temperature_sma">San Martin de los Andes  -1°/30°</string>
-    <string name="home_item_mayor">Złaz jest przewidziany dla starszych Wędrowników i Wędrowniczek powyżej lat 18 tu</string>
-    <string name="title_activity_trasy">Map</string>
 
     <string name="trasa_bsas">Trasa w Buenos Aires</string>
     <string name="trasa_sma">Trasa w San Martin de los Andes</string>
@@ -31,11 +21,6 @@
 
     <string name="title_diciembre">Grudzień</string>
     <string name="title_enero">Styczeń</string>
-
-    <string name="suff_day">D</string>
-    <string name="suff_hours">G</string>
-    <string name="suff_min">M</string>
-    <string name="suff_sec">S</string>
 
 
     <string name="historic_media">Średnia hist.</string>
@@ -51,7 +36,7 @@
     <string name="date_10">Śr. 08/01</string>
 
 
-    <string name="date_niedz">Niedz.</string>
+    <string name="date_niedz">Nied.</string>
     <string name="date_pon">Pon.  </string>
     <string name="date_wt">Wt.   </string>
     <string name="date_sr">Śr.   </string>

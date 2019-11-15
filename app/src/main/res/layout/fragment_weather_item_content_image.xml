@@ -3,7 +3,6 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/ll_weather_content"
     android:background="#dd0D67A9">
 
         <TextView
@@ -26,7 +25,6 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewHistoricMedia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="14sp"
