@@ -24,8 +24,8 @@ public class CallendarResourceData {
         this.temperature = temperature;
     }
 
-    public String getImagesResource() {
-        return String.valueOf(imagesResource);
+    public int getImagesResource() {
+        return this.imagesResource;
     }
 
     public void setImagesResource(int imagesResource) {

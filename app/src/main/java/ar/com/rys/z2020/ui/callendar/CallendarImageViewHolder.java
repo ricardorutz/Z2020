@@ -21,7 +21,7 @@ public class CallendarImageViewHolder extends RecyclerView.ViewHolder {
     private  RecyclerView recyclerView;
     private CallendarDetailsAdapter mAdapter;
 
-    CallendarImageViewHolder(View itemView) {
+    public CallendarImageViewHolder(View itemView) {
         super(itemView);
         this.itemView = itemView;
         this.textViewTitle = itemView.findViewById(R.id.text_callendar_view_title);

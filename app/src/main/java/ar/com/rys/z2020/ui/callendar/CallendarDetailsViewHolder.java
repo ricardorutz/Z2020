@@ -12,13 +12,16 @@ public class CallendarDetailsViewHolder extends RecyclerView.ViewHolder {
 
     private TextView textViewDate;
 
-    CallendarDetailsViewHolder(View itemView) {
+    public CallendarDetailsViewHolder(View itemView) {
         super(itemView);
         this.textViewDate = itemView.findViewById(R.id.text_view_callendar);
     }
 
     public void setData(CallendarResourceData data) {
         this.textViewDate.setText(data.getDateNameAndNumber());
+        this.textViewDate.setBackgroundColor(data.getImagesResource());
+
+
     }
 
 

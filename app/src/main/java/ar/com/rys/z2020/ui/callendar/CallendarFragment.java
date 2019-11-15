@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -37,6 +38,10 @@ public class CallendarFragment extends Fragment {
         CallendarStaticDataDeclaration w = new CallendarStaticDataDeclaration(getContext());
 
         final Context context = this.getContext();
+
+        final TextView textView = root.findViewById(R.id.textViewCalendar);
+        textView.setText(R.string.home_item_termin);
+        textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_calendar_alt_solid, 0, 0, 0);
 
 
         RecyclerView recyclerView = root.findViewById(R.id.recycler_callendar_view);
